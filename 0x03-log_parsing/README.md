@@ -22,7 +22,7 @@
 
 Follow these steps to install 0x03-log_parsing:
 
-1. Clone the repository from GitHub: `git clone https://github.com/your_username/0x03-log_parsing.git`
+1. Clone the repository from GitHub: `git clone https://github.com/mondlivundla/0x03-log_parsing.git`
 2. Navigate to the project directory: `cd 0x03-log_parsing`
 3. Install the required dependencies: `pip install -r requirements.txt`
 
