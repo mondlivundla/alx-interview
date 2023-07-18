@@ -1,22 +1,21 @@
 #!/usr/bin/python3
 
-"""
-    This script reads stdin line by line and
-    computes metrics
-    Author - Mondliwethu Vundla
-"""
+""" script that reads stdin line by line and computes metrics """
 
 import sys
 
-def printStatus(dic, size):
-    # Prints information
-    print("File size: {:d}".format(size))
-    for item in sorted(dic.keys()):
-        if dic[item] != 0:
-            print("{}: {:d}".format(item, dic[item]))
 
-# sourcery skips: use-contextlib-suppress
-statusCodes = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0, "404": 0, "405": 0, "500": 0}
+def printStatus(dic, size):
+    """ Prints information """
+    print("File size: {:d}".format(size))
+    for i in sorted(dic.keys()):
+        if dic[i] != 0:
+            print("{}: {:d}".format(i, dic[i]))
+
+
+# sourcery skip: use-contextlib-suppress
+statusCodes = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0,
+               "404": 0, "405": 0, "500": 0}
 
 count = 0
 size = 0
@@ -41,7 +40,7 @@ try:
             pass
     printStatus(statusCodes, size)
 
+
 except KeyboardInterrupt:
     printStatus(statusCodes, size)
     raise
-
